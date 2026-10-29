@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #z-fundo { position: absolute; inset: 0; background: #0B141A; }
+    #z-topo { position: absolute; left: 0; top: 0; width: 1080px; height: 330px; background: #1F2C34; display: flex; align-items: flex-end; padding: 0 60px 40px; gap: 28px; }
+    #z-av { width: 110px; height: 110px; border-radius: 50%; background: #D4AF5A; display: flex; align-items: center; justify-content: center; font: 900 50px "Montserrat", sans-serif; color: #072A1F; }
+    #z-nome { color: #E9EDEF; font: 800 50px "Montserrat", sans-serif; }
+    #z-nome small { display: block; color: #8696A0; font: 600 34px "Montserrat", sans-serif; }
+    #z-nome small b { display: inline-block; font-weight: 900; color: #25D366; }
+    #z-lista { position: absolute; left: 60px; top: 370px; width: 960px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+    .msg { position: relative; max-width: 900px; padding: 20px 30px 44px; border-radius: 0 26px 26px 26px; background: #202C33; color: #E9EDEF;
+      font: 600 44px/1.18 "Montserrat", sans-serif; }
+    .msg i { position: absolute; right: 26px; bottom: 12px; font: 500 28px "Montserrat", sans-serif; color: #8696A0; font-style: normal; }
+    #z-selo { position: absolute; left: 60px; top: 1010px; padding: 14px 26px; background: #D4AF5A; color: #072A1F; font-size: 38px; border-radius: 8px; }
+  </style>
+  <div id="root" data-composition-id="b-zap" data-width="1080" data-height="1920">
+    <div id="z-fundo"></div>
+    <div id="z-cam" class="cam">
+      <div id="z-topo"><div id="z-av">C</div><div id="z-nome">Cliente Bellas<small>digitando<b id="z-d1">.</b><b id="z-d2">.</b><b id="z-d3">.</b></small></div></div>
+      <div id="z-lista">
+        <div id="z-m0" class="msg">Olá boa tarde<i>17:35</i></div>
+        <div id="z-m1" class="msg">Foi perfeito perdi 8 kilos<i>17:36</i></div>
+        <div id="z-m2" class="msg">Não dá nem pra acreditar nisso<i>12:03</i></div>
+        <div id="z-m3" class="msg">Alta estima lá em cima, vcs me proporcionaram isso tudo. Sou grata, muito mesmo<i>09:37</i></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#z-cam", { scale: 1, y: 0 }, { scale: 1.12, y: -40, duration: 6.633, ease: "none" }, 0);
+    ["#z-d1", "#z-d2", "#z-d3"].forEach((s, i) => tl.fromTo(s, { y: 0 }, { y: -9, duration: 0.26, ease: "sine.inOut", yoyo: true, repeat: 27 }, 0.1 + i * 0.13));
+    tl.fromTo("#z-m0", { opacity: 0, y: 40, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(1.6)" }, 0.050);
+    tl.fromTo("#z-m1", { opacity: 0, y: 40, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(1.6)" }, 0.050);
+    tl.fromTo("#z-m2", { opacity: 0, y: 40, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(1.6)" }, 2.152);
+    tl.fromTo("#z-m3", { opacity: 0, y: 40, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(1.6)" }, 3.824);
+    window.__timelines["b-zap"] = tl;
+  </script>
+</template>

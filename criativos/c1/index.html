@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0D3B2C; }
+      #root { position: relative; width: 1080px; height: 1920px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="28.53" data-width="1080" data-height="1920">
+      <div id="c-gancho" data-composition-id="c-gancho" data-composition-src="compositions/c-gancho.html" data-start="0.000" data-duration="3.601" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-q1" data-composition-id="c-q1" data-composition-src="compositions/c-q1.html" data-start="3.601" data-duration="2.633" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-q2" data-composition-id="c-q2" data-composition-src="compositions/c-q2.html" data-start="6.234" data-duration="2.101" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-q3" data-composition-id="c-q3" data-composition-src="compositions/c-q3.html" data-start="8.335" data-duration="2.856" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-q4" data-composition-id="c-q4" data-composition-src="compositions/c-q4.html" data-start="11.191" data-duration="2.180" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-resultado" data-composition-id="c-resultado" data-composition-src="compositions/c-resultado.html" data-start="13.371" data-duration="3.758" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-prova" data-composition-id="c-prova" data-composition-src="compositions/c-prova.html" data-start="17.129" data-duration="5.450" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="c-whatsapp" data-composition-id="c-whatsapp" data-composition-src="compositions/c-whatsapp.html" data-start="22.579" data-duration="5.951" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="legendas" data-composition-id="legendas" data-composition-src="compositions/legendas.html" data-start="0"
+        data-duration="28.53" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index: 5"></div>
+      <audio id="narracao-1" class="clip" data-start="0.25" data-volume="1" data-track-index="10" src="assets/narracao-1.mp3"></audio>
+      <audio id="narracao-2" class="clip" data-start="22.729" data-volume="1" data-track-index="11" src="assets/narracao-2.mp3"></audio>
+      <audio id="som-0-whoosh" class="clip" data-start="3.601" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="12" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-1-whoosh" class="clip" data-start="6.234" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="13" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-2-whoosh" class="clip" data-start="8.335" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="14" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-3-whoosh" class="clip" data-start="11.191" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="15" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-4-whoosh" class="clip" data-start="13.371" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="16" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-5-whoosh" class="clip" data-start="17.129" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="17" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-6-whoosh" class="clip" data-start="22.579" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="18" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-7-impacto" class="clip" data-start="5.762" data-duration="1.6" data-media-start="0" data-volume="0.4" data-track-index="19" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-8-impacto" class="clip" data-start="7.851" data-duration="1.6" data-media-start="0" data-volume="0.4" data-track-index="20" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-9-impacto" class="clip" data-start="10.707" data-duration="1.6" data-media-start="0" data-volume="0.4" data-track-index="21" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-10-impacto" class="clip" data-start="12.507" data-duration="1.6" data-media-start="0" data-volume="0.4" data-track-index="22" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-11-impacto" class="clip" data-start="0.772" data-duration="1.6" data-media-start="0" data-volume="0.4" data-track-index="23" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-12-clique" class="clip" data-start="15.300" data-duration="0.15" data-media-start="0.8" data-volume="0.5" data-track-index="24" src=".media/audio/sfx/sfx_002.mp3"></audio>
+      <audio id="som-13-notificacao" class="clip" data-start="19.129" data-duration="1.0" data-media-start="0" data-volume="0.4" data-track-index="25" src=".media/audio/sfx/sfx_004.mp3"></audio>
+      <audio id="som-14-notificacao" class="clip" data-start="25.011" data-duration="1.0" data-media-start="0" data-volume="0.4" data-track-index="26" src=".media/audio/sfx/sfx_004.mp3"></audio>
+      <audio id="som-15-clique" class="clip" data-start="25.214" data-duration="0.15" data-media-start="0.8" data-volume="0.6" data-track-index="27" src=".media/audio/sfx/sfx_002.mp3"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+    .contorno { -webkit-text-stroke: 12px #072A1F; paint-order: stroke fill; }
+
+    #g-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 1000px;
+      background: linear-gradient(180deg, rgba(7,42,31,.92) 0%, rgba(7,42,31,.7) 50%, rgba(7,42,31,0) 100%); }
+    #g-tit { position: absolute; left: 70px; top: 210px; width: 940px; color: #F7F0E1; }
+    #g-l1, #g-l3 { font-size: 88px; line-height: 1; display: block; }
+    #g-l2 { font-size: 160px; white-space: nowrap; line-height: .95; color: #D4AF5A; display: block; margin: 6px 0 10px; }
+  </style>
+  <div id="root" data-composition-id="c-gancho" data-width="1080" data-height="1920">
+    <div id="g-cam" class="cam">
+      <video id="g-v" class="clip" data-start="0.000" data-duration="3.601" data-media-start="4.2" src="assets/mesa-pote.mp4" muted playsinline></video>
+    </div>
+    <div id="g-scrim"></div>
+    <div id="g-tit" class="mont"><span id="g-l1">MEU RITUAL</span><span id="g-l2">1 MINUTO</span><span id="g-l3">PRA EMAGRECER</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#g-cam", { scale: 1 }, { scale: 1.08, duration: 3.601, ease: "none" }, 0);
+    tl.fromTo("#g-l2", { scale: 1 }, { scale: 1.08, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "0 50%" }, 0.772);
+    window.__timelines["c-gancho"] = tl;
+  </script>
+</template>

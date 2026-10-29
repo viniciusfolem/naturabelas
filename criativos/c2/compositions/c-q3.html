@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+    .contorno { -webkit-text-stroke: 12px #072A1F; paint-order: stroke fill; }
+
+    #p-box { position: absolute; left: 70px; top: 230px; width: 940px; padding: 34px 40px; background: #0D3B2C; border-left: 14px solid #D4AF5A; }
+    #p-txt { color: #F7F0E1; font-size: 72px; line-height: 1.02; }
+    #p-resp { position: absolute; left: 560px; top: 560px; padding: 8px 36px; border: 12px solid #D4AF5A; color: #D4AF5A; background: rgba(7,42,31,.9);
+      font-size: 150px; line-height: 1; }
+  </style>
+  <div id="root" data-composition-id="c-q3" data-width="1080" data-height="1920">
+    <div id="p-cam" class="cam">
+      <video id="p-v" class="clip" data-start="0.000" data-duration="3.053" data-media-start="6.0" src="assets/parque-pote.mp4" muted playsinline></video>
+    </div>
+    <div id="p-box"><div id="p-txt" class="mont">TRATAMENTO DE 5 DIAS?</div></div>
+    <div id="p-resp" class="mont">TEM!</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#p-cam", { scale: 1.1 }, { scale: 1, duration: 3.053, ease: "none" }, 0);
+    tl.fromTo("#p-box", { x: -1000 }, { x: 0, duration: 0.3, ease: "power4.out" }, 0.03);
+    tl.fromTo("#p-resp", { opacity: 0, scale: 1.8, rotation: -8 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.18, ease: "back.out(2)" }, 2.480);
+    window.__timelines["c-q3"] = tl;
+  </script>
+</template>

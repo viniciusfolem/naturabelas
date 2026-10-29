@@ -1,0 +1,41 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #l-tit { position: absolute; left: 70px; top: 240px; width: 940px; color: #F7F0E1; font-size: 66px; line-height: 1.05; }
+    #l-tit span { display: block; }
+    #l-t2 { color: #D4AF5A; }
+    #l-col { position: absolute; left: 70px; top: 440px; display: flex; flex-direction: column; gap: 30px; }
+    .item { position: relative; font-size: 150px; line-height: 1; color: #F7F0E1; }
+    .risco { position: absolute; left: -10px; right: -10px; top: 50%; height: 16px; margin-top: -8px; background: #B8322A; transform-origin: 0 50%; }
+    #l-voce { position: absolute; left: 70px; top: 1000px; color: #D4AF5A; font-size: 90px; }
+  </style>
+  <div id="root" data-composition-id="b-lista" data-width="1080" data-height="1920">
+    <div id="l-tudo" class="cam">
+      <div id="l-tit" class="mont"><span id="l-t1">ELAS JÁ TINHAM</span><span id="l-t2">TENTADO DE TUDO:</span></div>
+      <div id="l-col">
+      <div id="l-i0" class="item mont">DIETA<i id="l-r0" class="risco"></i></div>
+      <div id="l-i1" class="item mont">CHÁ<i id="l-r1" class="risco"></i></div>
+      <div id="l-i2" class="item mont">JEJUM<i id="l-r2" class="risco"></i></div>
+      </div>
+      <div id="l-voce" class="mont">IGUAL VOCÊ.</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#l-tudo", { scale: 1, y: 0 }, { scale: 1.1, y: -30, duration: 6.135, ease: "none" }, 0);
+    tl.fromTo("#l-t1", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 0.05);
+    tl.fromTo("#l-t2", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 0.963);
+    tl.fromTo("#l-i0", { x: 900 }, { x: 0, duration: 0.25, ease: "power4.out" }, 2.172);
+    tl.fromTo("#l-r0", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power3.out" }, 2.572);
+    tl.fromTo("#l-i1", { x: 900 }, { x: 0, duration: 0.25, ease: "power4.out" }, 3.124);
+    tl.fromTo("#l-r1", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power3.out" }, 3.524);
+    tl.fromTo("#l-i2", { x: 900 }, { x: 0, duration: 0.25, ease: "power4.out" }, 3.902);
+    tl.fromTo("#l-r2", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power3.out" }, 4.302);
+    tl.fromTo("#l-voce", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }, 5.092);
+    window.__timelines["b-lista"] = tl;
+  </script>
+</template>

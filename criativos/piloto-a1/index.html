@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0D3B2C; }
+      #root { position: relative; width: 1080px; height: 1920px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="28.68" data-width="1080" data-height="1920">
+      <div id="s1-gancho" data-composition-id="s1-gancho" data-composition-src="compositions/s1-gancho.html" data-start="0.000" data-duration="4.500" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s2-antes" data-composition-id="s2-antes" data-composition-src="compositions/s2-antes.html" data-start="4.500" data-duration="3.572" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s3-semana" data-composition-id="s3-semana" data-composition-src="compositions/s3-semana.html" data-start="8.072" data-duration="3.212" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s4-produto" data-composition-id="s4-produto" data-composition-src="compositions/s4-produto.html" data-start="11.284" data-duration="2.173" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s5-virada" data-composition-id="s5-virada" data-composition-src="compositions/s5-virada.html" data-start="13.457" data-duration="5.065" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s6-prova" data-composition-id="s6-prova" data-composition-src="compositions/s6-prova.html" data-start="18.522" data-duration="4.200" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s7-whatsapp" data-composition-id="s7-whatsapp" data-composition-src="compositions/s7-whatsapp.html" data-start="22.722" data-duration="5.958" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="legendas" data-composition-id="legendas" data-composition-src="compositions/legendas.html" data-start="0"
+        data-duration="28.68" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index: 5"></div>
+      <audio id="narracao-1" class="clip" data-start="0.25" data-volume="1" data-track-index="10" src="assets/narracao-1.mp3"></audio>
+      <audio id="narracao-2" class="clip" data-start="22.872" data-volume="1" data-track-index="11" src="assets/narracao-2.mp3"></audio>
+      <audio id="som-0-whoosh" class="clip" data-start="3.512" data-duration="0.6" data-media-start="0" data-volume="0.45" data-track-index="12" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-1-whoosh" class="clip" data-start="4.500" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="13" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-2-whoosh" class="clip" data-start="8.072" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="14" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-3-whoosh" class="clip" data-start="11.284" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="12" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-4-whoosh" class="clip" data-start="13.457" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="13" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-5-whoosh" class="clip" data-start="22.722" data-duration="0.6" data-media-start="0" data-volume="0.3" data-track-index="14" src=".media/audio/sfx/sfx_001.mp3"></audio>
+      <audio id="som-6-impacto" class="clip" data-start="6.299" data-duration="1.6" data-media-start="0" data-volume="0.35" data-track-index="12" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-7-impacto" class="clip" data-start="7.228" data-duration="1.6" data-media-start="0" data-volume="0.35" data-track-index="13" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-8-impacto" class="clip" data-start="10.941" data-duration="1.6" data-media-start="0" data-volume="0.35" data-track-index="14" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-9-impacto" class="clip" data-start="12.506" data-duration="1.6" data-media-start="0" data-volume="0.45" data-track-index="12" src=".media/audio/sfx/sfx_003.mp3"></audio>
+      <audio id="som-10-clique" class="clip" data-start="9.183" data-duration="0.15" data-media-start="0.8" data-volume="0.5" data-track-index="13" src=".media/audio/sfx/sfx_002.mp3"></audio>
+      <audio id="som-11-clique" class="clip" data-start="10.541" data-duration="0.15" data-media-start="0.8" data-volume="0.5" data-track-index="14" src=".media/audio/sfx/sfx_002.mp3"></audio>
+      <audio id="som-12-clique" class="clip" data-start="14.522" data-duration="0.15" data-media-start="0.8" data-volume="0.5" data-track-index="12" src=".media/audio/sfx/sfx_002.mp3"></audio>
+      <audio id="som-13-notificacao" class="clip" data-start="20.622" data-duration="1.0" data-media-start="0" data-volume="0.4" data-track-index="13" src=".media/audio/sfx/sfx_004.mp3"></audio>
+      <audio id="som-14-notificacao" class="clip" data-start="25.154" data-duration="1.0" data-media-start="0" data-volume="0.4" data-track-index="14" src=".media/audio/sfx/sfx_004.mp3"></audio>
+      <audio id="som-15-clique" class="clip" data-start="25.357" data-duration="0.15" data-media-start="0.8" data-volume="0.6" data-track-index="12" src=".media/audio/sfx/sfx_002.mp3"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

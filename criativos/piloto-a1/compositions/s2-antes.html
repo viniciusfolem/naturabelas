@@ -1,0 +1,31 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #s2-tag { position: absolute; left: 0; top: 960px; padding: 22px 40px 22px 70px; background: #0D3B2C; color: #F7F0E1; font-size: 54px; }
+    #s2-tag b { color: #D4AF5A; }
+    .carimbo { position: absolute; padding: 10px 34px; border: 9px solid #B8322A; color: #B8322A; background: rgba(247,240,225,.92);
+      font-size: 104px; line-height: 1; }
+    #s2-c1 { left: 90px; top: 290px; }
+    #s2-c2 { left: 430px; top: 520px; }
+  </style>
+  <div id="root" data-composition-id="s2-antes" data-width="1080" data-height="1920">
+    <div id="s2-cam" class="cam"><div id="s2-in" class="cam"><img src="assets/foto-antes.jpg" alt="A Geicy antes" /></div></div>
+    <div id="s2-tag" class="mont">ANTES <b>·</b> MANAUS</div>
+    <div id="s2-c1" class="carimbo mont">ANSIOSA</div>
+    <div id="s2-c2" class="carimbo mont">GORDA</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s2-cam", { scale: 1.02, x: 30, y: 40 }, { scale: 1.2, x: -30, y: -60, duration: 3.572, ease: "none" }, 0);
+    tl.fromTo("#s2-in", { scale: 1 }, { scale: 1.08, duration: 0.16, ease: "power3.out" }, 1.799);
+    tl.fromTo("#s2-in", { scale: 1.08 }, { scale: 1.16, duration: 0.16, ease: "power3.out", immediateRender: false }, 2.728);
+    tl.fromTo("#s2-tag", { x: -700 }, { x: 0, duration: 0.35, ease: "power4.out" }, 0.12);
+    tl.fromTo("#s2-c1", { opacity: 0, scale: 1.6, rotation: -7 }, { opacity: 1, scale: 1, rotation: -7, duration: 0.18, ease: "back.out(2)" }, 1.799);
+    tl.fromTo("#s2-c2", { opacity: 0, scale: 1.6, rotation: 5 }, { opacity: 1, scale: 1, rotation: 5, duration: 0.18, ease: "back.out(2)" }, 2.728);
+    window.__timelines["s2-antes"] = tl;
+  </script>
+</template>

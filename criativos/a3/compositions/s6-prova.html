@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #s6-cam { transform-origin: 50% 30%; }
+    #s6-cont { position: absolute; left: 0; width: 1080px; top: 820px; text-align: center; }
+    #s6-num { display: block; color: #D4AF5A; font-size: 190px; line-height: .95; -webkit-text-stroke: 14px #072A1F; paint-order: stroke fill; }
+    #s6-lab { display: block; color: #F7F0E1; font-size: 56px; letter-spacing: .12em; -webkit-text-stroke: 9px #072A1F; paint-order: stroke fill; }
+  </style>
+  <div id="root" data-composition-id="s6-prova" data-width="1080" data-height="1920">
+    <div id="s6-cam" class="cam">
+      <video id="s6-v" class="clip" data-start="0" data-duration="4.1" src="assets/fala-17mil.mp4" playsinline data-has-audio="true" data-volume="1"></video>
+    </div>
+    <div id="s6-cont" class="mont"><span id="s6-num">0</span><span id="s6-lab">MULHERES AJUDADAS</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const n = { v: 0 }, el = document.querySelector("#s6-num");
+    tl.fromTo("#s6-cam", { scale: 1 }, { scale: 1.07, duration: 0.3, ease: "power3.out" }, 1.200);
+    tl.fromTo("#s6-cont", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: "power4.out" }, 0.950);
+    tl.fromTo(n, { v: 0 }, { v: 17000, duration: 0.9, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(n.v).toLocaleString("pt-BR") + (n.v > 16999 ? "+" : ""); } }, 1.200);
+    window.__timelines["s6-prova"] = tl;
+  </script>
+</template>

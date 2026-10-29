@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #s4-marca { position: absolute; left: 0; width: 1080px; top: 230px; text-align: center; }
+    #s4-m1 { display: block; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 46px; letter-spacing: .5em; color: #F7F0E1;
+      -webkit-text-stroke: 8px #072A1F; paint-order: stroke fill; }
+    #s4-m2 { display: block; font-family: "Playfair Display", serif; font-weight: 700; font-size: 168px; line-height: 1; color: #D4AF5A;
+      -webkit-text-stroke: 10px #072A1F; paint-order: stroke fill; }
+  </style>
+  <div id="root" data-composition-id="s4-produto" data-width="1080" data-height="1920">
+    <div id="s4-cam" class="cam">
+      <video id="s4-v" class="clip" data-start="0" data-duration="2.300" data-media-start="16.4" src="assets/mesa-pote.mp4" muted playsinline></video>
+    </div>
+    <div id="s4-marca"><span id="s4-m1">BELLAS</span><span id="s4-m2">EMAGRY</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s4-cam", { scale: 1 }, { scale: 1.1, duration: 2.300, ease: "none" }, 0);
+    tl.fromTo("#s4-m1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25, ease: "power4.out" }, 1.176);
+    tl.fromTo("#s4-m2", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(1.8)" }, 1.326);
+    window.__timelines["s4-produto"] = tl;
+  </script>
+</template>

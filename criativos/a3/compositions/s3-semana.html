@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0D3B2C; }
+    .cam { position: absolute; inset: 0; }
+    .cam img, .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    .mont { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    #s3-tit { position: absolute; left: 70px; top: 250px; width: 940px; color: #F7F0E1; font-size: 64px; line-height: 1.05; }
+    .dia { position: absolute; left: 70px; width: 940px; height: 210px; display: flex; align-items: center; gap: 44px;
+      background: #072A1F; border-left: 14px solid #D4AF5A; padding-left: 44px; }
+    .dia .nome { font-size: 112px; color: #D4AF5A; width: 270px; }
+    .dia .txt { font-size: 60px; color: #F7F0E1; position: relative; }
+    #s3-d1 { top: 420px; } #s3-d2 { top: 650px; } #s3-d3 { top: 880px; border-left-color: #B8322A; }
+    #s3-d3 .nome { color: #B8322A; }
+    #s3-risco { position: absolute; left: -12px; right: -12px; top: 50%; height: 12px; margin-top: -6px; background: #B8322A; transform-origin: 0 50%; }
+  </style>
+  <div id="root" data-composition-id="s3-semana" data-width="1080" data-height="1920">
+    <div id="s3-all" class="cam">
+    <div id="s3-tit" class="mont">TODA SEMANA<br />ERA ASSIM:</div>
+    <div id="s3-d1" class="dia mont"><span class="nome">SEG</span><span class="txt">começo a dieta</span></div>
+    <div id="s3-d2" class="dia mont"><span class="nome">TER</span><span class="txt">aguento firme</span></div>
+    <div id="s3-d3" class="dia mont"><span class="nome">QUA</span><span class="txt">desisto<i id="s3-risco"></i></span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s3-all", { scale: 1 }, { scale: 1.07, duration: 3.190, ease: "none" }, 0);
+    tl.fromTo("#s3-tit", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 0.05);
+    tl.fromTo("#s3-d1", { x: 1100 }, { x: 0, duration: 0.35, ease: "power4.out" }, 0.461);
+    tl.fromTo("#s3-d2", { x: 1100 }, { x: 0, duration: 0.35, ease: "power4.out" }, 1.088);
+    tl.fromTo("#s3-d3", { x: 1100 }, { x: 0, duration: 0.35, ease: "power4.out" }, 2.458);
+    tl.fromTo("#s3-risco", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power3.out" }, 2.858);
+    window.__timelines["s3-semana"] = tl;
+  </script>
+</template>

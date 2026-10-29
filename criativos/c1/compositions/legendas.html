@@ -1,0 +1,84 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    .grupo { position: absolute; left: 0; width: 100%; top: 1150px; text-align: center; opacity: 0;
+      font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 84px; line-height: 1.05;
+      letter-spacing: -0.02em; color: #F7F0E1; -webkit-text-stroke: 12px #072A1F; paint-order: stroke fill; padding: 0 70px; }
+    .grupo .ouro { color: #D4AF5A; }
+  </style>
+  <div id="root" data-composition-id="legendas" data-width="1080" data-height="1920">
+    <div id="leg-0" class="grupo"><span>ESSE</span> <span>É</span> <span>O</span></div>
+    <div id="leg-1" class="grupo"><span>MEU</span> <span class="ouro">RITUAL</span> <span>PRA</span></div>
+    <div id="leg-2" class="grupo"><span>EMAGRECER.</span></div>
+    <div id="leg-3" class="grupo"><span>LEVA</span> <span>MENOS</span> <span>DE</span></div>
+    <div id="leg-4" class="grupo"><span>UM</span> <span>MINUTO.</span></div>
+    <div id="leg-5" class="grupo"><span>TEM</span> <span>PRA</span> <span>QUEM</span></div>
+    <div id="leg-6" class="grupo"><span>NUNCA</span> <span>TOMOU</span> <span>EMAGRECEDOR?</span></div>
+    <div id="leg-7" class="grupo"><span class="ouro">TEM!</span></div>
+    <div id="leg-8" class="grupo"><span>E</span> <span>PRA</span> <span>QUEM</span></div>
+    <div id="leg-9" class="grupo"><span>JÁ</span> <span>TOMA</span> <span>OUTRO?</span></div>
+    <div id="leg-10" class="grupo"><span class="ouro">TEM!</span></div>
+    <div id="leg-11" class="grupo"><span>TRATAMENTO</span> <span>CURTINHO,</span></div>
+    <div id="leg-12" class="grupo"><span>DE</span> <span class="ouro">5</span> <span>DIAS?</span></div>
+    <div id="leg-13" class="grupo"><span class="ouro">TEM!</span></div>
+    <div id="leg-14" class="grupo"><span>E</span> <span>EU</span> <span>TOMO?</span></div>
+    <div id="leg-15" class="grupo"><span class="ouro">TOMO.</span></div>
+    <div id="leg-16" class="grupo"><span>FOI</span> <span>ASSIM</span> <span>QUE</span></div>
+    <div id="leg-17" class="grupo"><span>EU</span> <span>PERDI</span> <span class="ouro">10</span></div>
+    <div id="leg-18" class="grupo"><span class="ouro">QUILOS</span> <span>EM</span> <span class="ouro">30</span></div>
+    <div id="leg-19" class="grupo"><span class="ouro">DIAS.</span></div>
+    <div id="leg-20" class="grupo"><span>EU</span> <span>JÁ</span> <span>AJUDEI</span></div>
+    <div id="leg-21" class="grupo"><span>MAIS</span> <span>DE</span> <span class="ouro">17</span></div>
+    <div id="leg-22" class="grupo"><span class="ouro">MIL</span> <span>MULHERES</span></div>
+    <div id="leg-23" class="grupo"><span>NO</span> <span>EMAGRECIMENTO</span></div>
+    <div id="leg-24" class="grupo"><span>E</span> <span>VOCÊ</span> <span>SERÁ</span></div>
+    <div id="leg-25" class="grupo"><span>A</span> <span>PRÓXIMA.</span></div>
+    <div id="leg-26" class="grupo"><span>QUER</span> <span>SABER</span> <span>QUAL</span></div>
+    <div id="leg-27" class="grupo"><span class="ouro">VERSÃO</span> <span>É</span> <span>A</span></div>
+    <div id="leg-28" class="grupo"><span>SUA?</span></div>
+    <div id="leg-29" class="grupo"><span>TOCA</span> <span>NO</span> <span>BOTÃO</span></div>
+    <div id="leg-30" class="grupo"><span>E</span> <span>FALA</span> <span>COMIGO</span></div>
+    <div id="leg-31" class="grupo"><span>NO</span> <span class="ouro">WHATSAPP.</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    function mostra(sel, ini, fim) {
+      tl.fromTo(sel, { opacity: 0, scale: 0.86 }, { opacity: 1, scale: 1, duration: 0.09, ease: "power4.out" }, ini);
+      tl.to(sel, { opacity: 0, duration: 0.06, ease: "power2.in" }, fim - 0.06);
+      tl.set(sel, { opacity: 0, visibility: "hidden" }, fim);
+    }
+  mostra("#leg-0", 0.200, 0.590);
+  mostra("#leg-1", 0.560, 1.321);
+  mostra("#leg-2", 1.291, 2.285);
+  mostra("#leg-3", 2.255, 2.877);
+  mostra("#leg-4", 2.847, 3.701);
+  mostra("#leg-5", 3.671, 4.189);
+  mostra("#leg-6", 4.159, 5.722);
+  mostra("#leg-7", 5.692, 6.314);
+  mostra("#leg-8", 6.284, 6.790);
+  mostra("#leg-9", 6.760, 7.811);
+  mostra("#leg-10", 7.781, 8.415);
+  mostra("#leg-11", 8.385, 9.518);
+  mostra("#leg-12", 9.488, 10.667);
+  mostra("#leg-13", 10.637, 11.271);
+  mostra("#leg-14", 11.241, 12.467);
+  mostra("#leg-15", 12.437, 13.431);
+  mostra("#leg-16", 13.401, 14.011);
+  mostra("#leg-17", 13.981, 14.998);
+  mostra("#leg-18", 14.968, 16.043);
+  mostra("#leg-19", 16.013, 17.309);
+  mostra("#leg-20", 17.279, 17.809);
+  mostra("#leg-21", 17.779, 18.909);
+  mostra("#leg-22", 18.879, 19.809);
+  mostra("#leg-23", 19.779, 21.209);
+  mostra("#leg-24", 21.179, 21.909);
+  mostra("#leg-25", 21.879, 22.709);
+  mostra("#leg-26", 22.679, 23.522);
+  mostra("#leg-27", 23.492, 24.091);
+  mostra("#leg-28", 24.061, 24.741);
+  mostra("#leg-29", 24.711, 25.600);
+  mostra("#leg-30", 25.570, 26.273);
+  mostra("#leg-31", 26.243, 27.484);
+    window.__timelines["legendas"] = tl;
+  </script>
+</template>

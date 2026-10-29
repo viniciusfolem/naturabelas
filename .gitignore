@@ -1,0 +1,7 @@
+.env
+
+# HyperFrames: vídeos e caches pesados
+criativos/*/assets/*.mp4
+criativos/*/.hyperframes/
+criativos/*/.media/
+criativos/*/renders/
