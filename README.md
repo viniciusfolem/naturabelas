@@ -12,7 +12,16 @@ Criativos, copy e conteúdo da Geicy Maralves (@geicymaralves, Instituto Natura 
 | `pesquisa/` | Posts e transcrições do Instagram (concorrentes e da Geicy) |
 | `estrategia/` | Estratégia antiga do método, cancelada (só histórico) |
 
-## Usar a skill em outro computador
+## Geicy: como instalar no seu Claude (site ou app)
+
+1. Baixe o arquivo **[naturabelas.zip](https://github.com/viniciusfolem/naturabelas/raw/main/naturabelas.zip)**. Não descompacte.
+2. No Claude, clique no seu nome (canto de baixo, à esquerda) > **Configurações** > **Capacidades** e ligue **Criar e editar arquivos**.
+3. Vá em **Personalizar** > **Skills** > **+** > **Enviar skill** e escolha o `naturabelas.zip`. Confira se a chave da skill ficou ligada.
+4. Abra uma conversa nova e escreva **"oi"**. Ela pergunta o que você quer fazer: roteiro, voz ou edição de vídeo.
+
+Para atualizar: apague a skill antiga e envie o zip novo. Precisa de plano pago do Claude.
+
+## Usar a skill em outro computador (Claude Code)
 
 ```bash
 git clone https://github.com/viniciusfolem/naturabelas.git

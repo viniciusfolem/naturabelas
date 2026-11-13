@@ -20,6 +20,26 @@ Valem para TODO conteúdo. Se uma peça quebrar uma regra, reescreva antes de en
   - manter 17 mil mulheres, prints autorizados e as versões.
 - Avise sempre o risco quando entregar uma peça com quilos e prazo. A decisão é da cliente.
 
+## Anvisa: por que não falamos do efeito no corpo
+
+O Bellas Emagry é vendido como cápsula de alimento (suplemento). Para suplemento, a Anvisa só aceita as frases da lista oficial (RDC 243/2018, art. 16, e Anexo V da IN 28/2018), **com o texto exato**, e proíbe qualquer palavra ou imagem que sugira tratamento (art. 17). A regra vale para rótulo, post, anúncio, story e **mensagem de WhatsApp**.
+
+| Não usar | Com cuidado | Pode |
+|---|---|---|
+| emagrece (como efeito do produto), perca X kg, seca barriga, queima gordura, acelera o metabolismo, termogênico, tira a fome, inibe o apetite, desincha, detox, reduz ansiedade, trata obesidade, "remédio", "medicação", "GLP-1 natural", "Ozempic natural", "sem efeito colateral", "sem contraindicação", "aprovado pela Anvisa", resultado garantido | depoimento de cliente falando do corpo; "100% natural" (exige prova) | a história da Geicy em 1ª pessoa, rotina, ritual, constância, autocuidado, acompanhamento no WhatsApp, entrega em Manaus, atendimento humano, as versões, como tomar |
+
+- A história da Geicy ("eu perdi 10 quilos") é decisão da cliente para o orgânico. Avise o risco sempre que entrar.
+- Se a Geicy pedir uma frase da lista vermelha, explique em uma linha por que não ("a Anvisa multa e o Meta derruba a conta") e ofereça a versão segura. Se ela insistir, a decisão é dela, mas deixe o aviso escrito.
+- Mais detalhes, casos e fontes: `pesquisa-copy.md`, seções 3 e 4.
+
+## Oferta e Black Friday (CDC)
+
+- O que o anúncio promete, o WhatsApp tem que cumprir (CDC, art. 30).
+- "De R$ X por R$ Y" ou "até 40% OFF" só com preço "de" **realmente praticado** nos 30 a 60 dias antes. Peça para ela guardar print. Subir o preço antes para dar desconto ("metade do dobro") é publicidade enganosa e a reclamação nº 1 da Black Friday.
+- Prazo e estoque reais ("até domingo, 23h59"). Contagem regressiva falsa é enganosa.
+- Compra pelo WhatsApp dá 7 dias para desistir (CDC, art. 49). Nunca escrever "não aceitamos devolução".
+- Brinde e frete grátis: dizer exatamente o que é o brinde e para onde vale o frete.
+
 ## Depoimentos
 
 - Só frase real e autorizada pela cliente. Nunca inventar, nunca "melhorar" a frase.
